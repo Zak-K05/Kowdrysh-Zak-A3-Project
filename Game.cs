@@ -70,6 +70,7 @@ namespace Game10003
             WindowCollision();
             CoinCollision();
 
+            // Show text for collected coins
             Text.Size = 25;
             Text.Draw($"Coins: {coinsCollected}", new Vector2(0,0));
         }
@@ -132,6 +133,7 @@ namespace Game10003
 
                 if (Vector2.Distance(player.position, coin.position) < player.radius)
                 {
+                   // If coin hasent been collect it add it
                     if (coin.active)
                     {
                         coinsCollected++;
@@ -144,11 +146,13 @@ namespace Game10003
 
         public void WindowCollision()
         {
+            // If player goes past left window put it back
             if (player.position.X - player.radius < 0)
             {
                 player.position.X = 0 + player.radius;
             }
 
+            // If player goes past right window put it back
             if (player.position.X + player.radius > Window.Width)
             {
                 player.position.X = Window.Width - player.radius;

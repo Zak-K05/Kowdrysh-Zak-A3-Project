@@ -21,6 +21,8 @@ namespace Platformer
 
         public void UpdatePlatform()
         {
+            // Draw the platform
+            
             Draw.FillColor = Color.Gray;
             Draw.LineSize = 2;
             Draw.LineColor = Color.Black;

@@ -21,6 +21,8 @@ namespace Platformer
 
         public void UpdateCoin()
         {
+            // Draw the coin
+            
             Draw.FillColor = Color.Yellow;
             Draw.LineSize = 0;
 
