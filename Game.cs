@@ -69,6 +69,9 @@ namespace Game10003
             PlatformCollisions();
             WindowCollision();
             CoinCollision();
+
+            Text.Size = 25;
+            Text.Draw($"Coins: {coinsCollected}", new Vector2(0,0));
         }
 
         public void UpdatePlatforms()
