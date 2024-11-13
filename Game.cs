@@ -132,8 +132,12 @@ namespace Game10003
 
                 if (Vector2.Distance(player.position, coin.position) < player.radius)
                 {
+                    if (coin.active)
+                    {
+                        coinsCollected++;
+                    }
+
                     coin.active = false;
-                    coinsCollected++;
                 }
             }
         }
