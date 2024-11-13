@@ -67,6 +67,7 @@ namespace Game10003
             player.UpdatePlayer();
 
             PlatformCollisions();
+            WindowCollision();
             CoinCollision();
         }
 
@@ -131,6 +132,19 @@ namespace Game10003
                     coin.active = false;
                     coinsCollected++;
                 }
+            }
+        }
+
+        public void WindowCollision()
+        {
+            if (player.position.X - player.radius < 0)
+            {
+                player.position.X = 0 + player.radius;
+            }
+
+            if (player.position.X + player.radius > Window.Width)
+            {
+                player.position.X = Window.Width - player.radius;
             }
         }
     }
